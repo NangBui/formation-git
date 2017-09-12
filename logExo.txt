@@ -1,0 +1,395 @@
+PS C:\Users\Administrateur\Desktop\projet-PAO> git init
+Initialized empty Git repository in C:/Users/Administrateur/Desktop/projet-PAO/.git/
+PS C:\Users\Administrateur\Desktop\projet-PAO> git add .
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   README.md
+        new file:   main.java
+
+PS C:\Users\Administrateur\Desktop\projet-PAO> git remote add origin https://github.com/NangBu
+i/projet-PAO.git
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   README.md
+        new file:   main.java
+
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/NangBui/projet-PAO.git'
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push -u origin projet-PAO
+error: src refspec projet-PAO does not match any.
+error: failed to push some refs to 'https://github.com/NangBui/projet-PAO.git'
+PS C:\Users\Administrateur\Desktop\projet-PAO> git commit -m "first commit"
+[master (root-commit) 443aa40] first commit
+ 3 files changed, 13 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 main.java
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push -u origin projet-PAO
+error: src refspec projet-PAO does not match any.
+error: failed to push some refs to 'https://github.com/NangBui/projet-PAO.git'
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push -u origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 538 bytes | 538.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/NangBui/projet-PAO.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git branch lot1
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout lot1
+Switched to branch 'lot1'
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch lot1
+nothing to commit, working tree clean
+PS C:\Users\Administrateur\Desktop\projet-PAO> git add .
+PS C:\Users\Administrateur\Desktop\projet-PAO> git commit -m "evolution 1"
+[lot1 afdfaea] evolution 1
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin projet-PAO
+error: src refspec projet-PAO does not match any.
+error: failed to push some refs to 'https://github.com/NangBui/projet-PAO.git'
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin lot1
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NangBui/projet-PAO.git
+ * [new branch]      lot1 -> lot1
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git merge lot1
+Updating 443aa40..afdfaea
+Fast-forward
+ main.java | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/NangBui/projet-PAO.git
+   443aa40..afdfaea  master -> master
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout lot1
+Switched to branch 'lot1'
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch lot1
+nothing to commit, working tree clean
+PS C:\Users\Administrateur\Desktop\projet-PAO> GIT ADD ;
+fatal: cannot handle ADD.exe as a builtin
+PS C:\Users\Administrateur\Desktop\projet-PAO> GIT ADD .
+fatal: cannot handle ADD.exe as a builtin
+PS C:\Users\Administrateur\Desktop\projet-PAO> GIT ADD .
+fatal: cannot handle ADD.exe as a builtin
+PS C:\Users\Administrateur\Desktop\projet-PAO> git add .
+PS C:\Users\Administrateur\Desktop\projet-PAO> git commit -m "evolution 2"
+[lot1 4abb7ef] evolution 2
+ 1 file changed, 4 insertions(+)
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin master
+To https://github.com/NangBui/projet-PAO.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/NangBui/projet-PAO.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin lot1
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NangBui/projet-PAO.git
+   afdfaea..4abb7ef  lot1 -> lot1
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git pull
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 4), reused 5 (delta 3), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/NangBui/projet-PAO
+   afdfaea..ed81fdd  master     -> origin/master
+ * [new branch]      lot2       -> origin/lot2
+Updating afdfaea..ed81fdd
+Fast-forward
+ main.java | 1 +
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Administrateur\Desktop\projet-PAO> git merge lot1
+Auto-merging main.java
+Merge made by the 'recursive' strategy.
+ main.java | 4 ++++
+ 1 file changed, 4 insertions(+)
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NangBui/projet-PAO.git
+   ed81fdd..4308a7c  master -> master
+PS C:\Users\Administrateur\Desktop\projet-PAO>
+PS C:\Users\Administrateur\Desktop\projet-PAO> git log
+commit 4308a7c854517583eb10bf0335a686723c7dfeea (HEAD -> master, origin/master)
+Merge: ed81fdd 4abb7ef
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:35:42 2017 +0200
+
+    Merge branch 'lot1'
+
+commit 4abb7efc18f8f8cf59f1431cc10722521796404b (origin/lot1, lot1)
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:34:04 2017 +0200
+
+    evolution 2
+
+commit ed81fdd35fe2f5a432a1427911067d5a7bdb605e
+Merge: fb5342b afdfaea
+Author: Olivier COUASNON <olivier.couasnon@sncf.fr>
+Date:   Tue Sep 12 14:29:00 2017 +0200
+
+    r<C3><A9>solution conflit
+
+commit afdfaea6bf54abe9b3a39a2ad550e36bbe78dacb
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:17:07 2017 +0200
+
+    evolution 1
+
+commit fb5342b73bcf85340387126f67c0910ded26f115 (origin/lot2)
+Author: Olivier COUASNON <olivier.couasnon@sncf.fr>
+Date:   Tue Sep 12 14:15:50 2017 +0200
+
+    AOP
+
+commit 443aa40f30dfe543bf9459e8dd59fa1b7a9d10e3
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:05:44 2017 +0200
+
+    first commit
+PS C:\Users\Administrateur\Desktop\projet-PAO> git pull --help
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Administrateur\Desktop\projet-PAO> git log
+commit 4308a7c854517583eb10bf0335a686723c7dfeea (HEAD -> master, origin/master)
+Merge: ed81fdd 4abb7ef
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:35:42 2017 +0200
+
+    Merge branch 'lot1'
+
+commit 4abb7efc18f8f8cf59f1431cc10722521796404b (origin/lot1, lot1)
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:34:04 2017 +0200
+
+    evolution 2
+
+commit ed81fdd35fe2f5a432a1427911067d5a7bdb605e
+Merge: fb5342b afdfaea
+Author: Olivier COUASNON <olivier.couasnon@sncf.fr>
+Date:   Tue Sep 12 14:29:00 2017 +0200
+
+    r<C3><A9>solution conflit
+
+commit afdfaea6bf54abe9b3a39a2ad550e36bbe78dacb
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:17:07 2017 +0200
+
+    evolution 1
+
+commit fb5342b73bcf85340387126f67c0910ded26f115 (origin/lot2)
+Author: Olivier COUASNON <olivier.couasnon@sncf.fr>
+Date:   Tue Sep 12 14:15:50 2017 +0200
+
+    AOP
+
+commit 443aa40f30dfe543bf9459e8dd59fa1b7a9d10e3
+Author: toto <toto@gmail.com>
+Date:   Tue Sep 12 14:05:44 2017 +0200
+
+    first commit
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout afdfaea6bf54abe9b3a39a2ad550e36bbe
+78dacb
+Note: checking out 'afdfaea6bf54abe9b3a39a2ad550e36bbe78dacb'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at afdfaea... evolution 1
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+HEAD detached at afdfaea
+nothing to commit, working tree clean
+PS C:\Users\Administrateur\Desktop\projet-PAO> git branch lot3
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout lot3
+Switched to branch 'lot3'
+PS C:\Users\Administrateur\Desktop\projet-PAO> dir
+
+
+    Répertoire : C:\Users\Administrateur\Desktop\projet-PAO
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       11/09/2017     15:33             80 .gitignore
+-a----       12/09/2017     15:00            287 main.java
+-a----       11/09/2017     16:56             36 README.md
+
+
+PS C:\Users\Administrateur\Desktop\projet-PAO> git add .
+PS C:\Users\Administrateur\Desktop\projet-PAO> git commit -m "evolution lot3 sans lot2"
+[lot3 1620013] evolution lot3 sans lot2
+ 1 file changed, 4 insertions(+)
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin lot3
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NangBui/projet-PAO.git
+ * [new branch]      lot3 -> lot3
+PS C:\Users\Administrateur\Desktop\projet-PAO> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git pull
+Already up-to-date.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git merge lot3
+Auto-merging main.java
+CONFLICT (content): Merge conflict in main.java
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin master
+Everything up-to-date
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Administrateur\Desktop\projet-PAO> git add .
+PS C:\Users\Administrateur\Desktop\projet-PAO> git commit -m "integration lot2"
+[master c045a82] integration lot2
+PS C:\Users\Administrateur\Desktop\projet-PAO> git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NangBui/projet-PAO.git
+   4308a7c..c045a82  master -> master
+PS C:\Users\Administrateur\Desktop\projet-PAO> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Administrateur\Desktop\projet-PAO>       // evolution 1
+// : Le terme «//» n'est pas reconnu comme nom d'applet de commande, fonction, fichier de
+script ou programme exécutable. Vérifiez l'orthographe du nom, ou si un chemin d'accès
+existe, vérifiez que le chemin d'accès est correct et réessayez.
+Au caractère Ligne:1 : 7
++       // evolution 1
++       ~~
+    + CategoryInfo          : ObjectNotFound: (//:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Administrateur\Desktop\projet-PAO>       System.out.println("debut projet....");
+System.out.println : Le terme «System.out.println» n'est pas reconnu comme nom d'applet de
+commande, fonction, fichier de script ou programme exécutable. Vérifiez l'orthographe du
+nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct et réessayez.
+Au caractère Ligne:1 : 7
++       System.out.println("debut projet....");
++       ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (System.out.println:String) [], CommandNotFoun
+   dException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Administrateur\Desktop\projet-PAO>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
